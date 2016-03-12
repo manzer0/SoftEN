@@ -30,7 +30,7 @@ require 'template/back/header.php';
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <div class="alert alert-info" role="alert">ยินดีต้อนรับสู่ระบบ ecProduct by itOffside.com</div>
+            <div class="alert alert-info" role="alert">ยินดีต้อนรับสู่ระบบ TheKeeper</div>
         </div>
     </div>
     <script type="text/javascript">

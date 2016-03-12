@@ -33,7 +33,7 @@
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <style type="text/css">
         body {
-             background-image: url("images/bg-thai.jpg");
+             background-image: url("<?php echo base_url(); ?>/images/bg-thai.jpg");
              background-attachment: fixed;
         }
         </style>
@@ -54,7 +54,7 @@
                   <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>/images/thekeeper.png" alt=""/></a>
                     <a class="blog-nav-item active" href="<?php echo base_url(); ?>">หน้าหลัก</a>
                     <a class="blog-nav-item active" href="<?php echo base_url(); ?>/product">สินค้า</a>
-                    <a class="blog-nav-item active" href="<?php echo base_url(); ?>/cart">ตะกร้าสินค้า</a>
+                    <a class="blog-nav-item active" href="<?php echo base_url(); ?>/cart">ตะกร้าสินค้า<span class='badge badge-success icon icon-octoface'>test</span></a>
 
                 </nav>
             </div>

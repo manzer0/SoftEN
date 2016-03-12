@@ -1,11 +1,11 @@
 <?php
 
 function base_url() {
-    return "http://localhost/ecproduct";
+    return "http://127.0.0.1/soften";
 }
 
 function base_path() {
-    return $_SERVER['DOCUMENT_ROOT'] . "/ecproduct";
+    return $_SERVER['DOCUMENT_ROOT'] . "/soften";
 }
 
 function salt_pass($pass) {

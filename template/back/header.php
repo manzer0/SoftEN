@@ -16,7 +16,7 @@
         <div id="warpper">
             <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0;" role="navigation">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="<?php echo $baseUrl; ?>/back">ecProduct</a>
+                    <a class="navbar-brand" href="<?php echo $baseUrl; ?>/back">TheKeeper</a>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li class="dropdown">
@@ -26,7 +26,7 @@
                         <ul class="dropdown dropdown-menu">
                             <li>
                                 <a href="<?php echo $baseUrl; ?>/back/user/profile"><i class="glyphicon glyphicon-user"></i>
-                                    User Profile 
+                                    User Profile
                                 </a>
                             </li>
                             <li>
@@ -47,7 +47,7 @@
                     <div class="sidebar-collapse">
                         <ul id="side-menu" class="nav">
                             <li>
-                                <a href="<?php echo $baseUrl; ?>/itoffside-admin"><i class="glyphicon glyphicon-home"></i> หน้าแรก</a>
+                                <a href="<?php echo $baseUrl; ?>/admin"><i class="glyphicon glyphicon-home"></i> หน้าแรก</a>
                             </li>
                             <li>
                                 <a href="<?php echo $baseUrl; ?>/back/user"><i class="glyphicon glyphicon-user"></i> ผู้ใช้(ลูกค้า)</a>

@@ -89,7 +89,7 @@ require 'template/front/header.php';
                                 <tr>
                                     <td>
                                         <a href="<?php echo base_url(); ?>/upload/product/<?php echo $rs_ct['image']; ?>" data-imagelightbox="a">
-                                            <img src="<?php echo base_url(); ?>/upload/product/sm_<?php echo $rs_ct['image']; ?>" class="img-responsive" alt="Responsive image">
+                                            <img src="<?php echo base_url(); ?>/upload/product/sm_<?php echo $rs_ct['image']; ?>" class="img-responsive" alt="Responsive image" style="width:120px; height:180px;">
                                         </a>
                                     </td>
                                     <td>
@@ -101,7 +101,7 @@ require 'template/front/header.php';
                                         <?php echo number_format($rs_ct['price'], 2); ?>
                                     </td>
                                     <td>
-                                        <input style="text-align:center;" type="text" name="qtyupdate[<?php echo $i;?>]" value="<?php echo $_SESSION[_ss . 'qty'][$key]; ?>" class="form-control input-sm" autocomplete="off" data-validation="number" data-validation-allowing="float">
+                                        <input type="number" style="text-align:center;" type="text" name="qtyupdate[<?php echo $i;?>]" value="<?php echo $_SESSION[_ss . 'qty'][$key]; ?>" class="form-control input-sm" autocomplete="off" data-validation="number" data-validation-allowing="float">
                                         <input type="hidden" name="arr_key_<?php echo $i;?>" value="<?php echo $key;?>">
                                     </td>
                                     <td style="text-align:right;">
@@ -170,7 +170,7 @@ require 'template/front/header.php';
         $('a').imageLightbox();
         $.validate();
         $('.recal').click(function(){
-           $('#cartform').submit(); 
+           $('#cartform').submit();
         });
         $('.ordercart').click(function(){
             window.location = 'order';

@@ -12,8 +12,8 @@
         <title>เข้าสู่ระบบ ecProduct</title>
         <style>
             /* CSS used here will be applied after bootstrap.css */
-            body { 
-                background: url('<?php echo $baseUrl; ?>/images/bg_suburb.jpg') no-repeat center center fixed; 
+            body {
+                background: url('<?php echo $baseUrl; ?>/images/bg-thai.jpg') no-repeat center center fixed; 
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;

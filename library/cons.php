@@ -1,3 +1,3 @@
 <?php
 
-define("_ss", "ecproduct");
+define("_ss", "soften");

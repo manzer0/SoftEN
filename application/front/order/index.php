@@ -133,13 +133,13 @@ require 'template/front/header.php';
                                     <tr>
                                         <td>
                                             <a href="<?php echo base_url(); ?>/upload/product/<?php echo $rs_ct['image']; ?>" data-imagelightbox="a">
-                                                <img src="<?php echo base_url(); ?>/upload/product/sm_<?php echo $rs_ct['image']; ?>" class="img-responsive" alt="Responsive image">
+                                                <img src="<?php echo base_url(); ?>/upload/product/sm_<?php echo $rs_ct['image']; ?>" class="img-responsive" alt="Responsive image" style="width:120px; height:180px;">
                                             </a>
                                         </td>
                                         <td>
                                             <a href="<?php echo base_url(); ?>/product/view/<?php echo $rs_ct['id']; ?>">
                                                 <?php echo $rs_ct['name']; ?>
-                                                <input type="hidden" name="product_<?php echo $i;?>" value="<?php echo $rs_ct['id']?>"> 
+                                                <input type="hidden" name="product_<?php echo $i;?>" value="<?php echo $rs_ct['id']?>">
                                             </a>
                                         </td>
                                         <td style="text-align:right;">

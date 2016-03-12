@@ -59,14 +59,14 @@ require 'template/front/header.php';
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail" style="height: 330px!important;">
                                     <a href="<?php echo $baseUrl; ?>/product/view/<?php echo $rs_pc['id']; ?>">
-                                        <img src="<?php echo $baseUrl; ?>/upload/product/thumb_<?php echo $rs_pc['image']; ?>" alt="<?php echo $rs_pc['pname']; ?>">
+                                        <img src="<?php echo $baseUrl; ?>/upload/product/thumb_<?php echo $rs_pc['image']; ?>" alt="<?php echo $rs_pc['pname']; ?>" style="width:150px; height:230px;">
                                     </a>
                                     <div class="caption">
                                         <a href="<?php echo $baseUrl; ?>/product/view/<?php echo $rs_pc['id']; ?>"  style="font-size: 13px;"><?php echo $rs_pc['pname']; ?></a>
                                         <p  style="font-size: 13px;font-weight: bold;color: red;">ราคา : <?php echo number_format($rs_pc['price']); ?> บาท</p>
                                         <p  style="font-size: 13px;">หมวดหมู่ : <?php echo $rs_pc['cname']; ?></p>
                                         <p>
-                                            <a href="<?php echo $baseUrl; ?>/product/view/<?php echo $rs_pc['id']; ?>" class="btn btn-default" role="button">รายละเอียด</a>
+                                            <a href="<?php echo $baseUrl; ?>/product/view/<?php echo $rs_pc['id']; ?>" class="btn btn-info" role="button">รายละเอียด</a>
                                         </p>
                                     </div>
                                 </div>

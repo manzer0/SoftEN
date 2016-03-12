@@ -46,7 +46,7 @@ require 'template/front/header.php';
 
     <div class="blog-header">
         <ol class="breadcrumb">
-        
+
             <li><a href="<?php echo base_url(); ?>">หน้าแรก</a></li>
             <li><a href="<?php echo base_url(); ?>/categorie/<?php echo $rs_pd['cid']; ?>"><?php echo $rs_pd['cname']; ?></a></li>
             <li class="active"><?php echo $rs_pd['name']; ?></li>
@@ -68,8 +68,8 @@ require 'template/front/header.php';
                             <dl class="dl-horizontal">
                                 <dt>ยี่ห้อ</dt>
                                 <dd><?php echo $rs_pd['brandname']; ?></dd>
-                                <dt>ราคา</dt>
-                                <dd><?php echo number_format($rs_pd['price'], 2); ?></dd>
+                                <dt style="font-weight: bold;color: red;" >ราคา</dt>
+                                <dd style="font-weight: bold;color: red;" ><?php echo number_format($rs_pd['price'], 2); ?> บาท</dd>
                             </dl>
                             <hr>
                             <form class="form-inline" role="form" action="<?php echo base_url();?>/cart/update/<?php echo $rs_pd['id'];?>" method="post">
