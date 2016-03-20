@@ -1,0 +1,189 @@
+$lh: 1.5em;
+
+
+
+input[type="text"],
+input[type="tel"] {
+  font: inherit;
+  line-height: inherit;
+  padding: $lh/4 $lh/2;
+}
+
+.payment {
+  margin: 0;
+  padding: $lh 0.1875em;
+  background: #fff;
+}
+
+.cardInfo {
+  font-size: 1.25em;
+}
+
+.cardInfo__personalDetails,
+.cardInfo__cardDetails {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cardInfo__cardDetails {
+  border-top: solid 1px #eee;
+  margin-top: 0.375em;
+}
+
+.paymentInfo__total {
+  font-size: 1.25em;
+  background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/lock.svg') no-repeat center left;
+  background-size: 1.5em;
+  margin: 0 0 0.75em 0;
+  padding-left: 2em;
+}
+
+.form-row {
+  margin: 0.375em 0;
+}
+
+
+
+.icon-secure,
+.cc-num__wrap {
+  position: relative;
+}
+
+.cardInfo_firstname,
+.cardInfo_surname {
+  width: 48.75%;
+}
+
+.cardInfo_firstname {
+  float: left;
+}
+
+.cardInfo_surname {
+  float: right;
+}
+
+.card {
+  position: absolute;
+  display: block;
+  right: 0.375em;
+  top: 50%;
+  margin-top: -10px;
+  width: 28px;
+  height: 19px;
+  background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/card.svg') center center;
+  background-size: 100%;
+}
+
+.cardInfo__cc-exp,
+.cardInfo__cc-cvc,
+.cc-exp__example {
+  float: left;
+  max-width: 4.875em;
+}
+
+.cardInfo__cc-exp {
+  margin-right: 0.75em;
+}
+
+.cardInfo__cc-exp,
+.cc-exp__example {
+  max-width: 5.75em;
+}
+
+.cc-num.visa + .card {
+  background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/visa.png') no-repeat center center;
+}
+
+.cc-num.amex + .card {
+  background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/amex.png') no-repeat center center;
+}
+
+.cc-num.mastercard + .card {
+  background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/mastercard.png') no-repeat center center;
+}
+
+.cc-num.diners + .card {
+  background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/diners.png') no-repeat center center;
+}
+
+.cc-num.discover + .card {
+  background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/discover.png') no-repeat center center;
+}
+
+.cardInfo__submission {
+  clear: both;
+  padding-top: 1.5 - 0.375em;
+  margin-bottom: 0.75em;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  display: block;
+  margin-top: 0.35em;
+  padding: 0.35em;
+  background: #fff;
+  border: solid 1px #ccc;
+  border-radius: 0.1875em;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  -webkit-font-smoothing: antialiased;
+
+  &.identified {
+    border-color: #2ecc71;
+  }
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+  // Target the :focus pseudo-class
+  border-color: #fff;
+  box-shadow: 0 0 0.1875em #3498db;
+  outline: none;
+
+  &.identified {
+    border-color: #2ecc71;
+    box-shadow: 0 0 0.1875em #2ecc71;
+  }
+}
+
+input[type="submit"] {
+  font-size: 0.875em;
+  background: #2ecc71;
+  border: solid 1px darken(#2ecc71,5%);
+  padding: 0.375em 0.5em;
+  color: #fff;
+  border-radius: 0.1875em;
+}
+
+.cancel-link {
+  font-size: 0.875em;
+  float: right;
+  color: #bbb;
+  padding-top: 0.375em;
+  text-decoration: none;
+}
+
+.cc-exp__outputs {
+  margin: 0;
+  padding: $lh/4 0 0;
+
+  b {
+    color: #999;
+  }
+}
+
+.cc-exp__output {
+  margin-right: 0.75em;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

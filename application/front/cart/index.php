@@ -108,10 +108,9 @@ require 'template/front/header.php';
                                         <?php echo number_format($rs_ct['price'] * $_SESSION[_ss . 'qty'][$key], 2); ?>
                                     </td>
                                     <td style="text-align:center;">
-                                        <button type="button" data-toggle="modal" data-target="#deleteModal<?php echo $rs_ct['id']; ?>" class="btn btn-danger">
-                                            <span class="glyphicon glyphicon-trash"></span>
-                                            ลบทิ้ง
-                                        </button>
+                                    <span class="glyphicon glyphicon-trash"></span>    <a role="button" class="btn btn-danger" href="<?php echo $baseUrl; ?>/cart/delete/<?php echo $rs_ct['id']; ?>">ลบ</a>
+
+
                                     </td>
                                 </tr>
                                 <!-- Modal -->

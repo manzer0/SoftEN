@@ -55,6 +55,23 @@ require 'template/front/header.php';
         touch-action: none;
     }
 </style>
+
+<script>
+
+function FillBilling(f) {
+  if(f.billingtoo.checked == true) {
+    f.fullname2.value = f.fullname.value;
+    f.address1.value = f.address.value;
+    f.address2.value = f.addresss.value;
+    f.district2.value = f.district.value;
+    f.province2.value = f.province.value;
+    f.postcode2.value = f.postcode.value;
+  }
+}
+
+</script>
+<script src="js/test.js"></script>
+<link href="css/style2.css" rel="stylesheet" type="text/css" media="all" />
 <div class="container">
     <div class="blog-header">
         <ol class="breadcrumb">
@@ -65,37 +82,31 @@ require 'template/front/header.php';
     </div>
     <div class="row">
         <div class="col-sm-12 blog-main">
-            <div class="row" style="font-size:13px;background-color: #fff; border-radius: 5px 5px;">
+            <div class="row" style="font-size:13px;background-color: #fff; border-radius: 5px 5px; padding: 50px;">
                 <?php if ($me_count > 0) { ?>
                 <h4>ที่อยู่จัดสั่งและตรวจสอบรายการสั่งซื้อ</h4>
                 <hr>
                     <form action="<?php echo base_url(); ?>/order/save" method="post" name="cartform" id="cartform" role="form" class="form-horizontal">
                         <div class="form-group">
+                          <h3>1. Shipping Address</h3>
                             <label class="col-sm-3 control-label">ชื่อ-นามสกุล</label>
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" name="fullname" data-validation="required">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">อีเมล์</label>
-                            <div class="col-sm-6">
-                                <input type="email" class="form-control" name="email" data-validation="email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">เบอร์โทรศัพท์</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" name="phone" data-validation="number">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-sm-3 control-label">ที่อยู่</label>
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" name="address" data-validation="required" data-validation="length" data-validation-length="max200">
+                                <br>
+                                  <input type="text" class="form-control" name="addresss" data-validation="required" data-validation="length" data-validation-length="max200">
+                                  <hr>
                             </div>
                         </div>
+
+
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">อำเภอ</label>
+                            <label class="col-sm-3 control-label">เขต/อำเภอ</label>
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" name="district" data-validation="required">
                             </div>
@@ -112,6 +123,123 @@ require 'template/front/header.php';
                                 <input type="text" class="form-control" name="postcode" data-validation="number">
                             </div>
                         </div>
+
+
+                        <hr>
+                            <form action="<?php echo base_url(); ?>/order/save" method="post" name="cartform" id="cartform" role="form" class="form-horizontal">
+                                <div class="form-group">
+                                  <h3>2. Billing address</h3>
+                                  <label><input type="checkbox" name="billingtoo" onclick="FillBilling(this.form)">
+                                  <em>ใช้ข้อมูลเดียวกันกับ Shipping Address.</em></label>
+                                  <br>
+                                  <br>
+
+
+
+                                    <label class="col-sm-3 control-label">ชื่อ-นามสกุล</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="fullname2" data-validation="required">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">ที่อยู่</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="address1" data-validation="required" data-validation="length" data-validation-length="max200">
+                                        <br>
+                                          <input type="text" class="form-control" name="address2" data-validation="required" data-validation="length" data-validation-length="max200">
+                                          <hr>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">เขต/อำเภอ</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="district2" data-validation="required">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">จังหวัด</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="province2" data-validation="required">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">รหัสไปรษณีย์</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="postcode2" data-validation="number">
+                                    </div>
+                                </div>
+                                <hr>
+                                    <form action="<?php echo base_url(); ?>/order/save" method="post" name="cartform" id="cartform" role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                          <h3>3. ชำระเงิน</h3>
+                                          <div class="form-group">
+                                              <label class="col-sm-3 control-label"></label>
+                                              <div class="col-sm-6">
+
+                                                    <hr>
+                                                    <label class="checkbox-inline">
+                                                      <input type="radio" value="" name="visa">Visa
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                      <input type="radio" value="" name="visa">Master Card
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                      <input type="checkbox" value="">Paypal
+                                                    </label>
+
+                                                    <figure class="payment clearfix">
+
+  <form class="simple_form cardInfo">
+
+    <fieldset class="cardInfo__cardDetails">
+
+      <div class="form-row cardInfo__cc-num">
+        <label for="cc-num">
+
+          <span>Card Number</span>
+        </label>
+        <div class="cc-num__wrap">
+          <input id="cc-num" type="tel" class="paymentInput cc-num" placeholder="•••• •••• •••• ••••" autocompletetype="cc-number" required="required">
+          <span class="card" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="form-row cardInfo__cc-exp">
+        <label for="cc-exp">
+
+          <span>Expires</span>
+        </label>
+        <input id="cc-exp" type="tel" class="paymentInput cc-exp cc-exp__demo" placeholder="MM / YY" autocompletetype="cc-exp" required="required">
+      </div>
+
+      <div class="form-row cardInfo__cc-cvc">
+        <label for="cc-cvc">
+
+          <span>CVC</span>
+        </label>
+        <input id="cc-cvc" type="tel" class="paymentInput cc-cvc cc-cvc__demo" placeholder="CVC" autocompletetype="cc-cvc" required="required">
+      </div>
+
+
+    </fieldset>
+  </form>
+
+</figure>
+
+                                              </div>
+                                          </div>
+
+
+
+
+
+
+
+                                        </form>
+
+
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
